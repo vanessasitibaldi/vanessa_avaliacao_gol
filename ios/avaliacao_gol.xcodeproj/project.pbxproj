@@ -194,7 +194,6 @@
 				29874CCF826ED826CB711769 /* Pods-avaliacao_golTests.debug.xcconfig */,
 				68CE327BCD6066A4ADDF01F9 /* Pods-avaliacao_golTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +307,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
