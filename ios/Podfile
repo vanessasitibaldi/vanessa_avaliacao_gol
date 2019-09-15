@@ -29,6 +29,12 @@ target 'avaliacao_gol' do
 
   pod 'react-native-netinfo', :path => '../node_modules/@react-native-community/netinfo'
 
+   # React Native Maps dependencies
+   rn_maps_path = '../node_modules/react-native-maps'
+   pod 'react-native-google-maps', :path => rn_maps_path
+   pod 'GoogleMaps'
+   pod 'Google-Maps-iOS-Utils'
+
   target 'avaliacao_golTests' do
     inherit! :search_paths
     # Pods for testing

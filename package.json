@@ -9,6 +9,7 @@
     "postinstall": "npx jetify"
   },
   "dependencies": {
+    "@react-native-community/geolocation": "^2.0.2",
     "@react-native-community/netinfo": "^4.2.1",
     "axios": "^0.18.0",
     "react": "16.8.6",
