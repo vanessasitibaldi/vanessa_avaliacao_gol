@@ -1,4 +1,4 @@
-import {AsyncStorage} from 'react-native';
+import {AsyncStorage , Alert} from 'react-native';
 import store from './store'
 import * as types from './actions/types'
 import axios from 'axios'; 
@@ -13,6 +13,10 @@ export const validateConsult = async (consult, sucessCallBack, unauthorizationCa
         console.log('error 400+ ', JSON.stringify(consult) )
         return unauthorizationCallback();
     } else {
+        Alert.alert(
+            'Erro',
+            'Estamos com problemas na comunicação com o Servidor. Por favor tente mais tarde',
+          );
         console.log('error 300+/500+ ', JSON.stringify(consult) )
         return undefined
     }
