@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text , Switch} from 'react-native';
+import { View, Text , Switch , ScrollView} from 'react-native';
 import { connect } from 'react-redux';
 import * as actions from '../core/actions'
 
@@ -46,7 +46,7 @@ class HomeScreen extends Component{
 
     renderSwitchMedia(){
         return(
-            <View style={{ flexDirection:'row' , alignItems: 'center' , justifyContent: 'center', marginTop: 40}}>
+            <View style={{ flexDirection:'row' , alignItems: 'center' , justifyContent: 'center', marginTop: 40 , marginBottom: 40,}}>
                 <Text style={{marginRight: 10, fontSize: 15,}}>Fahrenheit </Text>
                 <Switch 
                     onValueChange={()=>this.setTemp()}
@@ -82,7 +82,7 @@ class HomeScreen extends Component{
         }else{
             let { home} = this.state ;
             return(
-                <View>
+                <ScrollView>
                     <View style={{ marginTop: 80 , alignItems: 'center'}}>
                         <Text style={{fontSize: 40}}>{home.title}</Text>
                         {!!home && !!home.consolidated_weather && !!home.consolidated_weather.length && (
@@ -97,7 +97,7 @@ class HomeScreen extends Component{
                     </View>
                     <View>{this.renderSwitchMedia()}</View>
                    
-                </View>
+                </ScrollView>
             )
 
         }
